@@ -230,7 +230,7 @@ func registerEMOEndpoints() {
 func registerAPIEndpoints() {
 	// register proxy-api endpoints
 	http.HandleFunc("/proxy-api/requests", func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Access-Control-Allow-Origin", "http://localhost:3000") // TODO: make configurable
+		w.Header().Set("Access-Control-Allow-Origin", "*") // TODO: make configurable
 		w.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
 		w.Header().Set("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, Authorization")
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
